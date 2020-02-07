@@ -33,7 +33,7 @@ export class SearchPostalAddress extends Component {
   onChange = (selected) => {
     this.setState({ selected }, () => {
       if (this.props.onAddressSelected) {
-        this.props.onAddressSelected(selected);
+        this.props.onAddressSelected(selected.value, selected.label);
       }
     });
   };
