@@ -25,8 +25,8 @@ function App(props) {
 
 proptypes:
 s
-  * `address: string` = plain text address that will be filled at first render
-  * `onAddressSelected: function`: a function that will be called when an address is selected. The adress object will be passed ass unique parameter
+  * `address: string` - plain text address that will be filled at first render
+  * `onAddressSelected: function` - a function that will be called when an address is selected. The adress object will be passed ass unique parameter
 
 address type:
 
