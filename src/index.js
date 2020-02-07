@@ -5,7 +5,6 @@ import AsyncSelect from 'react-select/async';
 function loadOptions(inputValue, callback) {
   console.log('searching', inputValue);
   fetch(`https://api-adresse.data.gouv.fr/search/?q=${inputValue.replace(/ /g, '+')}&limit=10`).then(r => r.json()).then(r => {
-    console.log(r.features) //.map(f => f.label));
     callback(r.features.map(f => ({ label: f.properties.label, value: f })));
   });
 };
@@ -17,7 +16,6 @@ export class SearchPostalAddress extends Component {
   onChange = (selected) => {
     this.setState({ selected }, () => {
       if (this.props.onAddressSelected) {
-        console.log(selected);
         this.props.onAddressSelected(selected);
       }
     });
