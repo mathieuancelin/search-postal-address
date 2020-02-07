@@ -21,6 +21,13 @@ function App(props) {
 }
 ```
 
+## Storybook
+
+```sh
+yarn install
+yarn storybook
+```
+
 ## API
 
 proptypes:
